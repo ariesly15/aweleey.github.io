@@ -22,7 +22,7 @@ jobs:
         steps:
             - add_ssh_keys:
                   fingerprints:
-                      - '4b:1e:d5:88:45:4a:9d:bf:81:c0:48:7a:25:85:0b:11'
+                      - '89:18:ed:78:e6:d7:01:f6:93:d3:31:0d:92:ba:66:d0'
             - checkout
             - run: git checkout docs
             - run: npm i
