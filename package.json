@@ -1,0 +1,17 @@
+{
+    "name": "lynote",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "vuepress dev blog",
+        "build": "vuepress build blog",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "codeleey",
+    "license": "ISC",
+    "dependencies": {
+        "element-ui": "^2.12.0"
+    }
+}
