@@ -4,13 +4,30 @@
 This is a tip
 :::
 
+::: warning
+This is a warning
+:::
+
 <template>
   <div class="test-demo">
     <el-button>button</el-button>
+    <br>
+    <br>
+    <el-alert
+        title="不可关闭的 alert"
+        type="success"
+        :closable="false">
+    </el-alert>
+    <br>
+    <el-alert
+        title="自定义 close-text"
+        type="info"
+        close-text="知道了">
+    </el-alert>
   </div>
 </template>
 
-``` js
+```js
 class InnerAudioContext {
     constructor(id, opts) {
         this.audioEl = this.init(id, opts);
@@ -138,5 +155,4 @@ export default {
         return new InnerAudioContext(id, opts);
     }
 };
-
 ```
