@@ -8,6 +8,8 @@ jobs:
         branches:
             only:
                 - docs
+            ignore:
+                - gh-pages
         docker:
             # specify the version you desire here
             - image: circleci/node:10.16.3
