@@ -20,9 +20,7 @@ jobs:
         working_directory: ~/repo
 
         steps:
-            - run:
-                  name: 切换到docs分支
-                  command: git checkout docs
+            - run: git checkout docs
             - run:
                   name: 安装依赖
                   command: npm i
