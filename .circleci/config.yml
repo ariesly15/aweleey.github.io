@@ -5,11 +5,6 @@
 version: 2
 jobs:
     build:
-        branches:
-            only:
-                - docs
-            ignore:
-                - gh-pages
         docker:
             # specify the version you desire here
             - image: circleci/node:10.16.3
@@ -18,7 +13,9 @@ jobs:
             # CircleCI maintains a library of pre-built images
             # documented at https://circleci.com/docs/2.0/circleci-images/
             # - image: circleci/mongo:3.4.4
-
+        filters:
+            branches:
+                only: docs
         working_directory: ~/repo
 
         steps:
@@ -29,6 +26,4 @@ jobs:
             - run: git checkout docs
             - run: npm i
             - run: chmod +x deploy.sh
-            - run:
-                  name: 部署
-                  command: npm run deploy
+            - run: npm run deploy
