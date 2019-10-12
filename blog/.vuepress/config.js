@@ -2,7 +2,7 @@ module.exports = {
     title: 'Hello JSer',
     description: 'daily note',
     base: '/aweleey/',
-    head: [['link', { rel: 'icon', href: `./public/favicon.ico` }]],
+    head: [['link', { rel: 'icon', href: `/favicon.ico` }]],
     themeConfig: {
         sidebar: {
             '/foo/': ['', 'one'],
