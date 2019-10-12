@@ -24,6 +24,5 @@ jobs:
                       - '89:18:ed:78:e6:d7:01:f6:93:d3:31:0d:92:ba:66:d0'
             - checkout
             - run: git checkout docs
-            - run: npm i
             - run: chmod +x deploy.sh
             - run: npm run deploy
