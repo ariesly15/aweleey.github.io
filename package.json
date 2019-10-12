@@ -4,15 +4,17 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "vuepress dev blog",
-        "build": "vuepress build blog",
-        "deploy": "./deploy.sh",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "npx vuepress dev blog",
+        "build": "npx vuepress build blog",
+        "deploy": "./deploy.sh"
     },
     "keywords": [],
     "author": "codeleey",
     "license": "ISC",
     "dependencies": {
         "element-ui": "^2.12.0"
+    },
+    "devDependencies": {
+        "vuepress": "^1.2.0"
     }
 }
