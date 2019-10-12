@@ -7,6 +7,9 @@ set -e
 npm i
 npm run build
 
+# 拷贝 circleci 配置文件
+cp -r .circleci blog/.vuepress/dist
+
 # 进入生成的构建文件夹
 cd blog/.vuepress/dist
 
