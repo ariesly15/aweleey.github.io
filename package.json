@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "npx vuepress dev blog",
-        "build": "npx vuepress build blog",
+        "dev": "npx vuepress dev docs",
+        "build": "npx vuepress build docs",
         "deploy": "./deploy.sh"
     },
     "keywords": [],
