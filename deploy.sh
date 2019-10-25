@@ -4,12 +4,11 @@
 set -e
 
 # 提交的文本
-commit_msg="deploy-commit-by-circleci-at-$(date -u)"
+commit_msg="deploy commit by circleci at `date '+%Y-%m-%d %T'`"
 
 if [ "$1" != "" ]
 then
-    echo "not empty: $1"
-	commit_msg="$1-deploy-commit-at-$(date -u)"
+	commit_msg="$1 deploy commit at `date '+%Y-%m-%d %T'`"
 fi
 
 # 构建
