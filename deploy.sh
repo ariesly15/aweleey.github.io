@@ -4,11 +4,10 @@
 set -e
 
 # 提交的文本
-commit_msg="deploy commit by circleci at `date '+%Y-%m-%d %T'`"
+_by="[circleci]"
 
-if [ "$1" != "" ]
-then
-	commit_msg="$1 deploy commit at `date '+%Y-%m-%d %T'`"
+if [ "$1" != "" ]; then
+    _by="[$1]"
 fi
 
 # 构建
@@ -28,7 +27,7 @@ git init
 git config user.email "ileeyi@qq.com"
 git config user.name "aweleey"
 git add -A
-git commit -m "$commit_msg"
+git commit -m "$_by deploy commit at $(date '+%Y-%m-%d %T')"
 
 # 如果你想要部署到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master

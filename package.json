@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "npx vuepress dev docs",
         "build": "npx vuepress build docs",
-        "deploy": "./deploy.sh $1"
+        "local-deploy": "./deploy.sh 'local-dev'",
+        "deploy": "./deploy.sh"
     },
     "keywords": [],
     "author": "codeleey",
