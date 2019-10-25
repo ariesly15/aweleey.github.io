@@ -20,12 +20,12 @@ git init
 git config --global user.email "ileeyi@qq.com"
 git config --global user.name "aweleey-circleci"
 git add -A
-git commit -m 'deploy'
+git commit -m 'deploy-circleci'
 
 # 如果你想要部署到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 如果你想要部署到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:aweleey/aweleey.git master:gh-pages
+git push -f git@github.com:aweleey/aweleey.github.io.git master:master
 
 cd -
