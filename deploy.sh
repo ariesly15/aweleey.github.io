@@ -3,6 +3,15 @@
 # 终止一个错误
 set -e
 
+# 提交的文本
+commit_msg="deploy-commit-by-circleci-at-$(date -u)"
+
+if [ "$1" != "" ]
+then
+    echo "not empty: $1"
+	commit_msg="$1-deploy-commit-at-$(date -u)"
+fi
+
 # 构建
 npm i
 npm run build
@@ -17,10 +26,10 @@ cd docs/.vuepress/dist
 # echo 'www.example.com' > CNAME
 
 git init
-git config --global user.email "ileeyi@qq.com"
-git config --global user.name "aweleey-circleci"
+git config user.email "ileeyi@qq.com"
+git config user.name "aweleey"
 git add -A
-git commit -m 'deploy-circleci'
+git commit -m "$commit_msg"
 
 # 如果你想要部署到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
