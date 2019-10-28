@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git index-pack failed | Hello JSer</title>
+    <meta name="description" content="daily note">
+    <link rel="icon" href="/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.0880c9ce.css" as="style"><link rel="preload" href="/assets/js/app.0088af92.js" as="script"><link rel="preload" href="/assets/js/2.9181d848.js" as="script"><link rel="preload" href="/assets/js/14.a07a65e8.js" as="script"><link rel="prefetch" href="/assets/js/10.8d8b004c.js"><link rel="prefetch" href="/assets/js/11.988222dc.js"><link rel="prefetch" href="/assets/js/12.6bbea143.js"><link rel="prefetch" href="/assets/js/13.f84b4d41.js"><link rel="prefetch" href="/assets/js/15.9c8caea3.js"><link rel="prefetch" href="/assets/js/16.433acea0.js"><link rel="prefetch" href="/assets/js/17.5e4f8555.js"><link rel="prefetch" href="/assets/js/18.a6e5c3d6.js"><link rel="prefetch" href="/assets/js/3.62aba8f6.js"><link rel="prefetch" href="/assets/js/4.768c6faa.js"><link rel="prefetch" href="/assets/js/5.3cda06d7.js"><link rel="prefetch" href="/assets/js/6.b31d439d.js"><link rel="prefetch" href="/assets/js/7.e2568603.js"><link rel="prefetch" href="/assets/js/8.2b3277d1.js"><link rel="prefetch" href="/assets/js/9.40e870c4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0880c9ce.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Hello JSer</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/about.html" class="nav-link">关于</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/about.html" class="nav-link">关于</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/notes/" class="sidebar-heading clickable"><span>笔记</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/JavaScript/" class="sidebar-heading clickable"><span>JavaScript</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/git/" class="sidebar-heading clickable router-link-active open"><span>Git</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/" class="sidebar-link">Git相关</a></li><li><a href="/git/git-ssh-config.html" class="sidebar-link">git ssh 多账户配置</a></li><li><a href="/git/git-index-pack-failed.html" class="active sidebar-link">git index-pack failed</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git-index-pack-failed"><a href="#git-index-pack-failed" class="header-anchor">#</a> git index-pack failed</h1> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token comment"># 首先，关闭压缩：</span>
+$ <span class="token function">git</span> config --global core.compression <span class="token number">0</span>
+
+<span class="token comment"># 接下来，让我们做一个部分克隆，以截断下来的信息量：</span>
+$ <span class="token function">git</span> clone --depth <span class="token number">1</span> <span class="token operator">&lt;</span>repo_URI<span class="token operator">&gt;</span>
+
+<span class="token comment"># 当它工作时，进入新目录并检索其余的克隆：</span>
+$ <span class="token function">git</span> fetch --unshallow
+
+<span class="token comment"># 或者</span>
+$ <span class="token function">git</span> fetch --depth<span class="token operator">=</span><span class="token number">2147483647</span>
+
+<span class="token comment"># 现在，做一个定期拉：</span>
+$ <span class="token function">git</span> pull --all
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/git/git-ssh-config.html" class="prev">git ssh 多账户配置</a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.0088af92.js" defer></script><script src="/assets/js/2.9181d848.js" defer></script><script src="/assets/js/14.a07a65e8.js" defer></script>
+  </body>
+</html>
