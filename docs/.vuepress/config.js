@@ -15,7 +15,7 @@ module.exports = {
             {
                 title: 'JavaScript',
                 path: '/JavaScript/',
-                children: ['/JavaScript/The-diff-with-import-and-require', '/JavaScript/test']
+                children: ['/JavaScript/', '/JavaScript/The-diff-with-import-and-require', '/JavaScript/test']
             },
             {
                 title: 'Git',
@@ -62,8 +62,8 @@ module.exports = {
             //     ]
             // },
             {
-                text: 'Demo',
-                items: [{ text: 'cv', link: '/cv' }, { text: 'about', link: '/about' }]
+                text: '关于',
+                link: '/about'
             }
         ]
     },
