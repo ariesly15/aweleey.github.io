@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # git ssh 多账户配置
 
 ## 生成key

@@ -1,6 +1,5 @@
 ---
 title: Markdown 简明语法手册
-sidebar: auto
 ---
 
 # Cmd Markdown 简明语法手册
